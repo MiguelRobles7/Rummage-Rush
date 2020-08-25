@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://segregation/Segregate1.glb" type="PackedScene" id=1]
+[ext_resource path="res://segregation/Segregate2.glb" type="PackedScene" id=2]
+[ext_resource path="res://segregation/trash 2.gltf" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "segregate"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scene Root:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.000964742, 0.3, 0.6, 0.899035, 1.2, 1.49904, 1.8, 2.09904, 2.4, 2.69904, 3.2, 3.49904, 3.8, 4.09904 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false, true, false, true, false, true, false, true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Scene Root3:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.16816, 0.182858, 2.81714 ), Vector3( -0.197748, 0.182858, 2.81714 ), Vector3( -0.197748, 0.182858, -2.26417 ), Vector3( 0.909157, 0.182858, -2.26417 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Scene Root3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Scene Root2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82409, -0.921096, 4.47719 )
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.824, -0.92, 4.486 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/segregate = SubResource( 1 )
+
+[node name="Scene Root3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.909157, 0.182858, -2.26417 )
+visible = false

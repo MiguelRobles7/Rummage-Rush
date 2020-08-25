@@ -1,0 +1,829 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://Containers/metalContainer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Containers/plasticContainer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Containers/rubberContainer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enviroment.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Players/Player1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://UI Sprites/p1board.png" type="Texture" id=7]
+[ext_resource path="res://UI Sprites/trashicon.png" type="Texture" id=8]
+[ext_resource path="res://fonts/8-BIT WONDER.TTF" type="DynamicFontData" id=9]
+[ext_resource path="res://UI Sprites/threeicons.png" type="Texture" id=10]
+[ext_resource path="res://Players/Player2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://UI Sprites/p2board.png" type="Texture" id=12]
+[ext_resource path="res://Players/Player3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://UI Sprites/p3board.png" type="Texture" id=14]
+[ext_resource path="res://Players/Player4.tscn" type="PackedScene" id=15]
+[ext_resource path="res://UI Sprites/p4board.png" type="Texture" id=16]
+[ext_resource path="res://sprites/coinicon.png" type="Texture" id=17]
+[ext_resource path="res://hazardDropP1.gd" type="Script" id=18]
+[ext_resource path="res://hazardDropP2.gd" type="Script" id=19]
+[ext_resource path="res://hazardDropP3.gd" type="Script" id=20]
+[ext_resource path="res://hazardDropP4.gd" type="Script" id=21]
+[ext_resource path="res://p1CanMove.gd" type="Script" id=22]
+[ext_resource path="res://p2CanMove.gd" type="Script" id=23]
+[ext_resource path="res://p3CanMove.gd" type="Script" id=24]
+[ext_resource path="res://p4CanMove.gd" type="Script" id=25]
+[ext_resource path="res://Scripts/Timer.gd" type="Script" id=26]
+[ext_resource path="res://p2Wait.gd" type="Script" id=27]
+[ext_resource path="res://p3Wait.gd" type="Script" id=28]
+[ext_resource path="res://p4Wait.gd" type="Script" id=29]
+[ext_resource path="res://Scripts/TrashSpawner.gd" type="Script" id=30]
+[ext_resource path="res://Facilities/Segregation Area.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Recycling Areas/MetalRecycle.tscn" type="PackedScene" id=32]
+[ext_resource path="res://Recycling Areas/PlasticRecycle.tscn" type="PackedScene" id=33]
+[ext_resource path="res://Recycling Areas/RubberRecycle.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Facilities/Dump.tscn" type="PackedScene" id=35]
+[ext_resource path="res://Facilities/Dump.gd" type="Script" id=36]
+[ext_resource path="res://music/Happy_Marimba_Royalty-Free_Background_Music_-_NO_COPYRIGHT.wav" type="AudioStream" id=37]
+[ext_resource path="res://Center.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Menu UI Assets/trask.png" type="Texture" id=39]
+[ext_resource path="res://Menu UI Assets/trashbad.png" type="Texture" id=40]
+[ext_resource path="res://Menu UI Assets/trashgood.png" type="Texture" id=41]
+[ext_resource path="res://music/coin.wav" type="AudioStream" id=42]
+[ext_resource path="res://belt/beltMetal.tscn" type="PackedScene" id=43]
+[ext_resource path="res://belt/beltRubber.tscn" type="PackedScene" id=44]
+[ext_resource path="res://belt/beltPlastic.tscn" type="PackedScene" id=45]
+[ext_resource path="res://segregation/Segregation.tscn" type="PackedScene" id=46]
+[ext_resource path="res://segregationAnimTimer.gd" type="Script" id=47]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 9 )
+
+[node name="Main" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0153065, 0.0113709, -0.00184393 )
+script = ExtResource( 1 )
+
+[node name="metalContainer" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 3, 0.3, 1.859 )
+
+[node name="plasticContainer" parent="." instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, 3, 0.3, 0.322428 )
+
+[node name="rubberContainer" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0, 0, -1, 0, 1, 0, 1, 0, 0, 3, 0.3, 3.44101 )
+
+[node name="Enviroment" parent="." instance=ExtResource( 5 )]
+
+[node name="Player1" parent="." instance=ExtResource( 6 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1, 0.23, 3.69477 )
+
+[node name="P1" type="Sprite" parent="Player1"]
+position = Vector2( 101.907, 70.8698 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="singleSprite" type="Sprite" parent="Player1/P1"]
+position = Vector2( 85, 15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="trashSprite" type="Sprite" parent="Player1/P1"]
+visible = false
+position = Vector2( 72.1665, -28.6341 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="x" type="Label" parent="Player1/P1"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 101.378
+margin_bottom = 116.201
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x"
+
+[node name="trashCount" type="Label" parent="Player1/P1"]
+visible = false
+margin_left = 73.579
+margin_top = 22.2448
+margin_right = 143.579
+margin_bottom = 92.2448
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="threeicons" type="Sprite" parent="Player1/P1"]
+visible = false
+position = Vector2( 46.8092, 7.39606 )
+scale = Vector2( 0.139371, 0.163754 )
+texture = ExtResource( 10 )
+
+[node name="segLabels" type="Control" parent="Player1/P1"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 67.3781
+margin_bottom = 86.2007
+
+[node name="segPlastic" type="Label" parent="Player1/P1/segLabels"]
+margin_left = 82.6219
+margin_top = -112.201
+margin_right = 156.622
+margin_bottom = -62.2007
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segMetal" type="Label" parent="Player1/P1/segLabels"]
+margin_left = 82.6219
+margin_top = -45.2877
+margin_right = 156.622
+margin_bottom = 24.7126
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segRubber" type="Label" parent="Player1/P1/segLabels"]
+margin_left = 82.6219
+margin_top = 11.7993
+margin_right = 156.622
+margin_bottom = 72.7993
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Player2" parent="." instance=ExtResource( 11 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, 0.23, 4 )
+
+[node name="P2" type="Sprite" parent="Player2"]
+position = Vector2( 296.907, 70.8698 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="singleSprite" type="Sprite" parent="Player2/P2"]
+position = Vector2( 85, 15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="trashSprite" type="Sprite" parent="Player2/P2"]
+visible = false
+position = Vector2( 72.1665, -28.6341 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="x" type="Label" parent="Player2/P2"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 101.378
+margin_bottom = 116.201
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x"
+
+[node name="trashCount" type="Label" parent="Player2/P2"]
+visible = false
+margin_left = 73.579
+margin_top = 22.2448
+margin_right = 143.579
+margin_bottom = 92.2448
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="threeicons" type="Sprite" parent="Player2/P2"]
+visible = false
+position = Vector2( 46.8092, 7.39606 )
+scale = Vector2( 0.139371, 0.163754 )
+texture = ExtResource( 10 )
+
+[node name="segLabels" type="Control" parent="Player2/P2"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 67.3781
+margin_bottom = 86.2007
+
+[node name="segPlastic" type="Label" parent="Player2/P2/segLabels"]
+margin_left = 82.6219
+margin_top = -112.201
+margin_right = 156.622
+margin_bottom = -62.2007
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segMetal" type="Label" parent="Player2/P2/segLabels"]
+margin_left = 82.6219
+margin_top = -45.2877
+margin_right = 156.622
+margin_bottom = 24.7126
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segRubber" type="Label" parent="Player2/P2/segLabels"]
+margin_left = 82.6219
+margin_top = 11.7993
+margin_right = 156.622
+margin_bottom = 72.7993
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Player3" parent="." instance=ExtResource( 13 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.23, 4 )
+
+[node name="P3" type="Sprite" parent="Player3"]
+position = Vector2( 495.907, 70.8698 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+
+[node name="singleSprite" type="Sprite" parent="Player3/P3"]
+position = Vector2( 85, 15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="trashSprite" type="Sprite" parent="Player3/P3"]
+visible = false
+position = Vector2( 72.1665, -28.6341 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="x" type="Label" parent="Player3/P3"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 101.378
+margin_bottom = 116.201
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x"
+
+[node name="trashCount" type="Label" parent="Player3/P3"]
+visible = false
+margin_left = 73.579
+margin_top = 22.2448
+margin_right = 143.579
+margin_bottom = 92.2448
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="threeicons" type="Sprite" parent="Player3/P3"]
+visible = false
+position = Vector2( 46.8092, 7.39606 )
+scale = Vector2( 0.139371, 0.163754 )
+texture = ExtResource( 10 )
+
+[node name="segLabels" type="Control" parent="Player3/P3"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 67.3781
+margin_bottom = 86.2007
+
+[node name="segPlastic" type="Label" parent="Player3/P3/segLabels"]
+margin_left = 82.6219
+margin_top = -112.201
+margin_right = 156.622
+margin_bottom = -62.2007
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segMetal" type="Label" parent="Player3/P3/segLabels"]
+margin_left = 82.6219
+margin_top = -45.2877
+margin_right = 156.622
+margin_bottom = 24.7126
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segRubber" type="Label" parent="Player3/P3/segLabels"]
+margin_left = 82.6219
+margin_top = 11.7993
+margin_right = 156.622
+margin_bottom = 72.7993
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="Player4" parent="." instance=ExtResource( 15 )]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.10763, 0.23, 4.30342 )
+
+[node name="P4" type="Sprite" parent="Player4"]
+position = Vector2( 692.907, 70.8698 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 16 )
+
+[node name="singleSprite" type="Sprite" parent="Player4/P4"]
+position = Vector2( 85, 15 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="trashSprite" type="Sprite" parent="Player4/P4"]
+visible = false
+position = Vector2( 72.1665, -28.6341 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="x" type="Label" parent="Player4/P4"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 101.378
+margin_bottom = 116.201
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "x"
+
+[node name="trashCount" type="Label" parent="Player4/P4"]
+visible = false
+margin_left = 73.579
+margin_top = 22.2448
+margin_right = 143.579
+margin_bottom = 92.2448
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="threeicons" type="Sprite" parent="Player4/P4"]
+visible = false
+position = Vector2( 46.8092, 7.39606 )
+scale = Vector2( 0.139371, 0.163754 )
+texture = ExtResource( 10 )
+
+[node name="segLabels" type="Control" parent="Player4/P4"]
+visible = false
+margin_left = 27.3781
+margin_top = 46.2007
+margin_right = 67.3781
+margin_bottom = 86.2007
+
+[node name="segPlastic" type="Label" parent="Player4/P4/segLabels"]
+margin_left = 82.6219
+margin_top = -112.201
+margin_right = 156.622
+margin_bottom = -62.2007
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segMetal" type="Label" parent="Player4/P4/segLabels"]
+margin_left = 82.6219
+margin_top = -45.2877
+margin_right = 156.622
+margin_bottom = 24.7126
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="segRubber" type="Label" parent="Player4/P4/segLabels"]
+margin_left = 82.6219
+margin_top = 11.7993
+margin_right = 156.622
+margin_bottom = 72.7993
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+
+[node name="TrashContainer" type="Node" parent="."]
+
+[node name="SegMetalContainer" type="Node" parent="."]
+
+[node name="SegPlasticContainer" type="Node" parent="."]
+
+[node name="SegRubberContainer" type="Node" parent="."]
+
+[node name="Player Status" type="Control" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="P2" type="Sprite" parent="Player Status"]
+
+[node name="P3" type="Sprite" parent="Player Status"]
+
+[node name="P4" type="Sprite" parent="Player Status"]
+
+[node name="Game Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="p1SpeedLabel" type="Label" parent="Game Control"]
+visible = false
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="scoreControl" type="Control" parent="Game Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Sprite" type="Sprite" parent="Game Control/scoreControl"]
+position = Vector2( 1491.07, 47.4066 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 17 )
+
+[node name="score" type="Label" parent="Game Control/scoreControl"]
+margin_left = 1418.99
+margin_top = 33.3289
+margin_right = 1561.99
+margin_bottom = 102.329
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 0.921569, 0.921569, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="hazardDropP1" type="Timer" parent="Game Control"]
+wait_time = 5.0
+autostart = true
+script = ExtResource( 18 )
+
+[node name="hazardDropP2" type="Timer" parent="Game Control"]
+script = ExtResource( 19 )
+
+[node name="hazardDropP3" type="Timer" parent="Game Control"]
+script = ExtResource( 20 )
+
+[node name="hazardDropP4" type="Timer" parent="Game Control"]
+script = ExtResource( 21 )
+
+[node name="p1CanMove" type="Timer" parent="Game Control"]
+one_shot = true
+script = ExtResource( 22 )
+
+[node name="p2CanMove" type="Timer" parent="Game Control"]
+script = ExtResource( 23 )
+
+[node name="p3CanMove" type="Timer" parent="Game Control"]
+script = ExtResource( 24 )
+
+[node name="p4CanMove" type="Timer" parent="Game Control"]
+script = ExtResource( 25 )
+
+[node name="p1Wait" type="Timer" parent="Game Control"]
+wait_time = 0.5
+one_shot = true
+script = ExtResource( 26 )
+
+[node name="p2Wait" type="Timer" parent="Game Control"]
+script = ExtResource( 27 )
+
+[node name="p3Wait" type="Timer" parent="Game Control"]
+script = ExtResource( 28 )
+
+[node name="p4Wait" type="Timer" parent="Game Control"]
+script = ExtResource( 29 )
+
+[node name="Difficulty" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="TrashSpawner" type="Timer" parent="Difficulty"]
+script = ExtResource( 30 )
+
+[node name="WaitLabel" type="Label" parent="Difficulty/TrashSpawner"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="AmountToSpawn" type="Timer" parent="Difficulty"]
+wait_time = 20.0
+
+[node name="SpawnLabel" type="Label" parent="Difficulty/AmountToSpawn"]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Segregation Area" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.68435, 0.532872, 2.61596 )
+
+[node name="metalContainer2" type="Node" parent="."]
+
+[node name="MetalRecycle" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.728, 0.120238, 2.62131 )
+
+[node name="PlasticRecycle" parent="." instance=ExtResource( 33 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8353, 0, 1.048 )
+
+[node name="RubberRecycle" parent="." instance=ExtResource( 34 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8363, 0.658402, 4.18944 )
+
+[node name="P1Tracker" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7034, 0.3, 0.804695 )
+
+[node name="HazardsContainer" type="Node" parent="."]
+
+[node name="Dump" parent="." instance=ExtResource( 35 )]
+transform = Transform( 1.5, 0, 0, 0, 1, 0, 0, 0, 0.75, -0.551153, 0.922473, 5.70658 )
+script = ExtResource( 36 )
+
+[node name="Musics" type="Node" parent="."]
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Musics"]
+stream = ExtResource( 37 )
+autoplay = true
+
+[node name="Center Area" parent="." instance=ExtResource( 38 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.11248, 0.399388, 1.32147 )
+
+[node name="trashIndicators" type="Node2D" parent="."]
+
+[node name="trask" type="Sprite" parent="trashIndicators"]
+visible = false
+position = Vector2( 358.183, 798 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 39 )
+
+[node name="trashbad" type="Sprite" parent="trashIndicators"]
+visible = false
+position = Vector2( 355.791, 793.217 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 40 )
+
+[node name="trashgood" type="Sprite" parent="trashIndicators"]
+visible = false
+position = Vector2( 355.791, 790.825 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 41 )
+
+[node name="coinsSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 42 )
+
+[node name="metalBelt" parent="." instance=ExtResource( 43 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.43811, 0.0227582, 4.75367 )
+
+[node name="rubberBelt" parent="." instance=ExtResource( 44 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.438, 0.023, 4.754 )
+
+[node name="plasticBelt" parent="." instance=ExtResource( 45 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.438, 0.023, 4.754 )
+
+[node name="segregationAnim" parent="." instance=ExtResource( 46 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.51298, 0.171249, 2.71365 )
+
+[node name="segregationAnimTimer" type="Timer" parent="."]
+one_shot = true
+script = ExtResource( 47 )
+[connection signal="plusOneTrash" from="." to="Player2" method="_on_Main_plusOneTrash"]
+[connection signal="plusOneTrash" from="." to="Player1" method="_on_Main_plusOneTrash"]
+[connection signal="plusOneTrash" from="." to="Player4" method="_on_Main_plusOneTrash"]
+[connection signal="plusOneTrash" from="." to="Player3" method="_on_Main_plusOneTrash"]
+[connection signal="startSegTimer" from="." to="segregationAnimTimer" method="_on_Main_startSegTimer"]
+[connection signal="body_entered" from="metalContainer" to="metalContainer" method="_on_metalContainer_body_entered"]
+[connection signal="body_exited" from="metalContainer" to="Player2" method="_on_metalContainer_body_exited"]
+[connection signal="body_exited" from="metalContainer" to="Player1" method="_on_metalContainer_body_exited"]
+[connection signal="body_exited" from="metalContainer" to="Player4" method="_on_metalContainer_body_exited"]
+[connection signal="body_exited" from="metalContainer" to="Player3" method="_on_metalContainer_body_exited"]
+[connection signal="canPickUp" from="metalContainer" to="Player2" method="_on_metalContainer_canPickUp"]
+[connection signal="canPickUp" from="metalContainer" to="Player1" method="_on_metalContainer_canPickUp"]
+[connection signal="canPickUp" from="metalContainer" to="Player4" method="_on_metalContainer_canPickUp"]
+[connection signal="canPickUp" from="metalContainer" to="Player3" method="_on_metalContainer_canPickUp"]
+[connection signal="gotRecycled" from="metalContainer" to="Player2" method="_on_metalContainer_gotRecycled"]
+[connection signal="gotRecycled" from="metalContainer" to="Player1" method="_on_metalContainer_gotRecycled"]
+[connection signal="gotRecycled" from="metalContainer" to="Player4" method="_on_metalContainer_gotRecycled"]
+[connection signal="gotRecycled" from="metalContainer" to="Player3" method="_on_metalContainer_gotRecycled"]
+[connection signal="p1IsEntered" from="metalContainer" to="Player1" method="_on_metalContainer_p1IsEntered"]
+[connection signal="p2IsEntered" from="metalContainer" to="Player2" method="_on_metalContainer_p2IsEntered"]
+[connection signal="p3IsEntered" from="metalContainer" to="Player3" method="_on_metalContainer_p3IsEntered"]
+[connection signal="p4IsEntered" from="metalContainer" to="Player4" method="_on_metalContainer_p4IsEntered"]
+[connection signal="playAnim" from="metalContainer" to="." method="_on_metalContainer_playAnim"]
+[connection signal="body_entered" from="plasticContainer" to="plasticContainer" method="_on_plasticContainer_body_entered"]
+[connection signal="body_exited" from="plasticContainer" to="Player2" method="_on_plasticContainer_body_exited"]
+[connection signal="body_exited" from="plasticContainer" to="Player1" method="_on_plasticContainer_body_exited"]
+[connection signal="body_exited" from="plasticContainer" to="Player4" method="_on_plasticContainer_body_exited"]
+[connection signal="body_exited" from="plasticContainer" to="Player3" method="_on_plasticContainer_body_exited"]
+[connection signal="canPickUp" from="plasticContainer" to="Player2" method="_on_plasticContainer_canPickUp"]
+[connection signal="canPickUp" from="plasticContainer" to="Player1" method="_on_plasticContainer_canPickUp"]
+[connection signal="canPickUp" from="plasticContainer" to="Player4" method="_on_plasticContainer_canPickUp"]
+[connection signal="canPickUp" from="plasticContainer" to="Player3" method="_on_plasticContainer_canPickUp"]
+[connection signal="gotRecycled" from="plasticContainer" to="Player2" method="_on_plasticContainer_gotRecycled"]
+[connection signal="gotRecycled" from="plasticContainer" to="Player1" method="_on_plasticContainer_gotRecycled"]
+[connection signal="gotRecycled" from="plasticContainer" to="Player4" method="_on_plasticContainer_gotRecycled"]
+[connection signal="gotRecycled" from="plasticContainer" to="Player3" method="_on_plasticContainer_gotRecycled"]
+[connection signal="p1IsEntered" from="plasticContainer" to="Player1" method="_on_plasticContainer_p1IsEntered"]
+[connection signal="p2IsEntered" from="plasticContainer" to="Player2" method="_on_plasticContainer_p2IsEntered"]
+[connection signal="p3IsEntered" from="plasticContainer" to="Player3" method="_on_plasticContainer_p3IsEntered"]
+[connection signal="p4IsEntered" from="plasticContainer" to="Player4" method="_on_plasticContainer_p4IsEntered"]
+[connection signal="playAnim" from="plasticContainer" to="." method="_on_plasticContainer_playAnim"]
+[connection signal="body_entered" from="rubberContainer" to="rubberContainer" method="_on_rubberContainer_body_entered"]
+[connection signal="body_exited" from="rubberContainer" to="Player2" method="_on_rubberContainer_body_exited"]
+[connection signal="body_exited" from="rubberContainer" to="Player1" method="_on_rubberContainer_body_exited"]
+[connection signal="body_exited" from="rubberContainer" to="Player4" method="_on_rubberContainer_body_exited"]
+[connection signal="body_exited" from="rubberContainer" to="Player3" method="_on_rubberContainer_body_exited"]
+[connection signal="canPickUp" from="rubberContainer" to="Player2" method="_on_rubberContainer_canPickUp"]
+[connection signal="canPickUp" from="rubberContainer" to="Player1" method="_on_rubberContainer_canPickUp"]
+[connection signal="canPickUp" from="rubberContainer" to="Player4" method="_on_rubberContainer_canPickUp"]
+[connection signal="canPickUp" from="rubberContainer" to="Player3" method="_on_rubberContainer_canPickUp"]
+[connection signal="gotRecycled" from="rubberContainer" to="Player2" method="_on_rubberContainer_gotRecycled"]
+[connection signal="gotRecycled" from="rubberContainer" to="Player1" method="_on_rubberContainer_gotRecycled"]
+[connection signal="gotRecycled" from="rubberContainer" to="Player4" method="_on_rubberContainer_gotRecycled"]
+[connection signal="gotRecycled" from="rubberContainer" to="Player3" method="_on_rubberContainer_gotRecycled"]
+[connection signal="p1IsEntered" from="rubberContainer" to="Player1" method="_on_rubberContainer_p1IsEntered"]
+[connection signal="p2IsEntered" from="rubberContainer" to="Player2" method="_on_rubberContainer_p2IsEntered"]
+[connection signal="p3IsEntered" from="rubberContainer" to="Player3" method="_on_rubberContainer_p3IsEntered"]
+[connection signal="p4IsEntered" from="rubberContainer" to="Player4" method="_on_rubberContainer_p4IsEntered"]
+[connection signal="playAnim" from="rubberContainer" to="." method="_on_rubberContainer_playAnim"]
+[connection signal="canMove" from="Player1" to="Game Control/p1CanMove" method="_on_Player1_canMove"]
+[connection signal="hazardSpawn" from="Player1" to="." method="_on_Player1_hazardSpawn"]
+[connection signal="metalContPickUp" from="Player1" to="metalContainer" method="_on_Player1_metalContPickUp"]
+[connection signal="metalContRecycled" from="Player1" to="metalContainer" method="_on_Player1_metalContRecycled"]
+[connection signal="metalContainerReturn" from="Player1" to="metalContainer" method="_on_Player1_metalContainerReturn"]
+[connection signal="metalStored" from="Player1" to="metalContainer" method="_on_Player1_metalStored"]
+[connection signal="minusScore" from="Player1" to="." method="_on_Player1_minusScore"]
+[connection signal="pickUpWait" from="Player1" to="Game Control/p1Wait" method="_on_Player1_pickUpWait"]
+[connection signal="plasticContPickUp" from="Player1" to="plasticContainer" method="_on_Player1_plasticContPickUp"]
+[connection signal="plasticContRecycled" from="Player1" to="plasticContainer" method="_on_Player1_plasticContRecycled"]
+[connection signal="plasticContainerReturn" from="Player1" to="plasticContainer" method="_on_Player1_plasticContainerReturn"]
+[connection signal="plasticStored" from="Player1" to="plasticContainer" method="_on_Player1_plasticStored"]
+[connection signal="plusOneMetal" from="Player1" to="metalContainer" method="_on_Player1_plusOneMetal"]
+[connection signal="plusOneMetal" from="Player1" to="Player1" method="_on_Player1_plusOneMetal"]
+[connection signal="plusOnePlastic" from="Player1" to="plasticContainer" method="_on_Player1_plusOnePlastic"]
+[connection signal="plusOnePlastic" from="Player1" to="Player1" method="_on_Player1_plusOnePlastic"]
+[connection signal="plusOneRubber" from="Player1" to="Player1" method="_on_Player1_plusOneRubber"]
+[connection signal="plusOneRubber" from="Player1" to="rubberContainer" method="_on_Player1_plusOneRubber"]
+[connection signal="rubberContPickUp" from="Player1" to="rubberContainer" method="_on_Player1_rubberContPickUp"]
+[connection signal="rubberContRecycled" from="Player1" to="rubberContainer" method="_on_Player1_rubberContRecycled"]
+[connection signal="rubberContainerReturn" from="Player1" to="rubberContainer" method="_on_Player1_rubberContainerReturn"]
+[connection signal="rubberStored" from="Player1" to="rubberContainer" method="_on_Player1_rubberStored"]
+[connection signal="segMetalGo" from="Player1" to="." method="_on_Player1_segMetalGo"]
+[connection signal="segPlasticGo" from="Player1" to="." method="_on_Player1_segPlasticGo"]
+[connection signal="segRubberGo" from="Player1" to="." method="_on_Player1_segRubberGo"]
+[connection signal="segregateAnimPlay" from="Player1" to="." method="_on_Player1_segregateAnimPlay"]
+[connection signal="tLim1" from="Player1" to="." method="_on_Player1_tLim1"]
+[connection signal="tLim2" from="Player1" to="." method="_on_Player1_tLim2"]
+[connection signal="tLim3" from="Player1" to="." method="_on_Player1_tLim3"]
+[connection signal="trashCount" from="Player1" to="." method="_on_Player1_trashCount"]
+[connection signal="trashDumped" from="Player1" to="." method="_on_Player1_trashDumped"]
+[connection signal="trashPickedUp" from="Player1" to="." method="_on_Player1_trashPickedUp"]
+[connection signal="trashSegregated" from="Player1" to="." method="_on_Player1_trashSegregated"]
+[connection signal="updateScore" from="Player1" to="." method="_on_Player1_updateScore"]
+[connection signal="canMove" from="Player2" to="Game Control/p2CanMove" method="_on_Player2_canMove"]
+[connection signal="hazardSpawn" from="Player2" to="." method="_on_Player2_hazardSpawn"]
+[connection signal="metalContPickUp" from="Player2" to="metalContainer" method="_on_Player2_metalContPickUp"]
+[connection signal="metalContRecycled" from="Player2" to="metalContainer" method="_on_Player2_metalContRecycled"]
+[connection signal="metalContainerReturn" from="Player2" to="metalContainer" method="_on_Player2_metalContainerReturn"]
+[connection signal="metalStored" from="Player2" to="metalContainer" method="_on_Player2_metalStored"]
+[connection signal="minusScore" from="Player2" to="." method="_on_Player2_minusScore"]
+[connection signal="pickUpWait" from="Player2" to="Game Control/p2Wait" method="_on_Player2_pickUpWait"]
+[connection signal="plasticContPickUp" from="Player2" to="plasticContainer" method="_on_Player2_plasticContPickUp"]
+[connection signal="plasticContRecycled" from="Player2" to="plasticContainer" method="_on_Player2_plasticContRecycled"]
+[connection signal="plasticContainerReturn" from="Player2" to="plasticContainer" method="_on_Player2_plasticContainerReturn"]
+[connection signal="plasticStored" from="Player2" to="plasticContainer" method="_on_Player2_plasticStored"]
+[connection signal="plusOneMetal" from="Player2" to="metalContainer" method="_on_Player2_plusOneMetal"]
+[connection signal="plusOneMetal" from="Player2" to="Player2" method="_on_Player2_plusOneMetal"]
+[connection signal="plusOnePlastic" from="Player2" to="plasticContainer" method="_on_Player2_plusOnePlastic"]
+[connection signal="plusOnePlastic" from="Player2" to="Player2" method="_on_Player2_plusOnePlastic"]
+[connection signal="plusOneRubber" from="Player2" to="Player2" method="_on_Player2_plusOneRubber"]
+[connection signal="plusOneRubber" from="Player2" to="rubberContainer" method="_on_Player2_plusOneRubber"]
+[connection signal="rubberContPickUp" from="Player2" to="rubberContainer" method="_on_Player2_rubberContPickUp"]
+[connection signal="rubberContRecycled" from="Player2" to="rubberContainer" method="_on_Player2_rubberContRecycled"]
+[connection signal="rubberContainerReturn" from="Player2" to="rubberContainer" method="_on_Player2_rubberContainerReturn"]
+[connection signal="rubberStored" from="Player2" to="rubberContainer" method="_on_Player2_rubberStored"]
+[connection signal="segMetalGo" from="Player2" to="." method="_on_Player2_segMetalGo"]
+[connection signal="segPlasticGo" from="Player2" to="." method="_on_Player2_segPlasticGo"]
+[connection signal="segRubberGo" from="Player2" to="." method="_on_Player2_segRubberGo"]
+[connection signal="segregateAnimPlay" from="Player2" to="." method="_on_Player2_segregateAnimPlay"]
+[connection signal="tLim1" from="Player2" to="." method="_on_Player2_tLim1"]
+[connection signal="tLim2" from="Player2" to="." method="_on_Player2_tLim2"]
+[connection signal="tLim3" from="Player2" to="." method="_on_Player2_tLim3"]
+[connection signal="trashCount" from="Player2" to="." method="_on_Player2_trashCount"]
+[connection signal="trashDumped" from="Player2" to="." method="_on_Player2_trashDumped"]
+[connection signal="trashPickedUp" from="Player2" to="." method="_on_Player2_trashPickedUp"]
+[connection signal="trashSegregated" from="Player2" to="." method="_on_Player2_trashSegregated"]
+[connection signal="updateScore" from="Player2" to="." method="_on_Player2_updateScore"]
+[connection signal="canMove" from="Player3" to="Game Control/p3CanMove" method="_on_Player3_canMove"]
+[connection signal="hazardSpawn" from="Player3" to="." method="_on_Player3_hazardSpawn"]
+[connection signal="metalContPickUp" from="Player3" to="metalContainer" method="_on_Player3_metalContPickUp"]
+[connection signal="metalContRecycled" from="Player3" to="metalContainer" method="_on_Player3_metalContRecycled"]
+[connection signal="metalContainerReturn" from="Player3" to="metalContainer" method="_on_Player3_metalContainerReturn"]
+[connection signal="metalStored" from="Player3" to="metalContainer" method="_on_Player3_metalStored"]
+[connection signal="minusScore" from="Player3" to="." method="_on_Player3_minusScore"]
+[connection signal="pickUpWait" from="Player3" to="Game Control/p3Wait" method="_on_Player3_pickUpWait"]
+[connection signal="plasticContPickUp" from="Player3" to="plasticContainer" method="_on_Player3_plasticContPickUp"]
+[connection signal="plasticContRecycled" from="Player3" to="plasticContainer" method="_on_Player3_plasticContRecycled"]
+[connection signal="plasticContainerReturn" from="Player3" to="plasticContainer" method="_on_Player3_plasticContainerReturn"]
+[connection signal="plasticStored" from="Player3" to="plasticContainer" method="_on_Player3_plasticStored"]
+[connection signal="plusOneMetal" from="Player3" to="metalContainer" method="_on_Player3_plusOneMetal"]
+[connection signal="plusOneMetal" from="Player3" to="Player3" method="_on_Player3_plusOneMetal"]
+[connection signal="plusOnePlastic" from="Player3" to="plasticContainer" method="_on_Player3_plusOnePlastic"]
+[connection signal="plusOnePlastic" from="Player3" to="Player3" method="_on_Player3_plusOnePlastic"]
+[connection signal="plusOneRubber" from="Player3" to="Player3" method="_on_Player3_plusOneRubber"]
+[connection signal="plusOneRubber" from="Player3" to="rubberContainer" method="_on_Player3_plusOneRubber"]
+[connection signal="rubberContPickUp" from="Player3" to="rubberContainer" method="_on_Player3_rubberContPickUp"]
+[connection signal="rubberContRecycled" from="Player3" to="rubberContainer" method="_on_Player3_rubberContRecycled"]
+[connection signal="rubberContainerReturn" from="Player3" to="rubberContainer" method="_on_Player3_rubberContainerReturn"]
+[connection signal="rubberStored" from="Player3" to="rubberContainer" method="_on_Player3_rubberStored"]
+[connection signal="segMetalGo" from="Player3" to="." method="_on_Player3_segMetalGo"]
+[connection signal="segPlasticGo" from="Player3" to="." method="_on_Player3_segPlasticGo"]
+[connection signal="segRubberGo" from="Player3" to="." method="_on_Player3_segRubberGo"]
+[connection signal="segregateAnimPlay" from="Player3" to="." method="_on_Player3_segregateAnimPlay"]
+[connection signal="tLim1" from="Player3" to="." method="_on_Player3_tLim1"]
+[connection signal="tLim2" from="Player3" to="." method="_on_Player3_tLim2"]
+[connection signal="tLim3" from="Player3" to="." method="_on_Player3_tLim3"]
+[connection signal="trashCount" from="Player3" to="." method="_on_Player3_trashCount"]
+[connection signal="trashDumped" from="Player3" to="." method="_on_Player3_trashDumped"]
+[connection signal="trashPickedUp" from="Player3" to="." method="_on_Player3_trashPickedUp"]
+[connection signal="trashSegregated" from="Player3" to="." method="_on_Player3_trashSegregated"]
+[connection signal="updateScore" from="Player3" to="." method="_on_Player3_updateScore"]
+[connection signal="canMove" from="Player4" to="Game Control/p4CanMove" method="_on_Player4_canMove"]
+[connection signal="hazardSpawn" from="Player4" to="." method="_on_Player4_hazardSpawn"]
+[connection signal="metalContPickUp" from="Player4" to="metalContainer" method="_on_Player4_metalContPickUp"]
+[connection signal="metalContRecycled" from="Player4" to="metalContainer" method="_on_Player4_metalContRecycled"]
+[connection signal="metalContainerReturn" from="Player4" to="metalContainer" method="_on_Player4_metalContainerReturn"]
+[connection signal="metalStored" from="Player4" to="metalContainer" method="_on_Player4_metalStored"]
+[connection signal="minusScore" from="Player4" to="." method="_on_Player4_minusScore"]
+[connection signal="pickUpWait" from="Player4" to="Game Control/p4Wait" method="_on_Player4_pickUpWait"]
+[connection signal="plasticContPickUp" from="Player4" to="plasticContainer" method="_on_Player4_plasticContPickUp"]
+[connection signal="plasticContRecycled" from="Player4" to="plasticContainer" method="_on_Player4_plasticContRecycled"]
+[connection signal="plasticContainerReturn" from="Player4" to="plasticContainer" method="_on_Player4_plasticContainerReturn"]
+[connection signal="plasticStored" from="Player4" to="plasticContainer" method="_on_Player4_plasticStored"]
+[connection signal="plusOneMetal" from="Player4" to="metalContainer" method="_on_Player4_plusOneMetal"]
+[connection signal="plusOneMetal" from="Player4" to="Player4" method="_on_Player4_plusOneMetal"]
+[connection signal="plusOnePlastic" from="Player4" to="plasticContainer" method="_on_Player4_plusOnePlastic"]
+[connection signal="plusOnePlastic" from="Player4" to="Player4" method="_on_Player4_plusOnePlastic"]
+[connection signal="plusOneRubber" from="Player4" to="Player4" method="_on_Player4_plusOneRubber"]
+[connection signal="plusOneRubber" from="Player4" to="rubberContainer" method="_on_Player4_plusOneRubber"]
+[connection signal="rubberContPickUp" from="Player4" to="rubberContainer" method="_on_Player4_rubberContPickUp"]
+[connection signal="rubberContRecycled" from="Player4" to="rubberContainer" method="_on_Player4_rubberContRecycled"]
+[connection signal="rubberContainerReturn" from="Player4" to="rubberContainer" method="_on_Player4_rubberContainerReturn"]
+[connection signal="rubberStored" from="Player4" to="rubberContainer" method="_on_Player4_rubberStored"]
+[connection signal="segMetalGo" from="Player4" to="." method="_on_Player4_segMetalGo"]
+[connection signal="segPlasticGo" from="Player4" to="." method="_on_Player4_segPlasticGo"]
+[connection signal="segRubberGo" from="Player4" to="." method="_on_Player4_segRubberGo"]
+[connection signal="segregateAnimPlay" from="Player4" to="." method="_on_Player4_segregateAnimPlay"]
+[connection signal="tLim1" from="Player4" to="." method="_on_Player4_tLim1"]
+[connection signal="tLim2" from="Player4" to="." method="_on_Player4_tLim2"]
+[connection signal="tLim3" from="Player4" to="." method="_on_Player4_tLim3"]
+[connection signal="trashCount" from="Player4" to="." method="_on_Player4_trashCount"]
+[connection signal="trashDumped" from="Player4" to="." method="_on_Player4_trashDumped"]
+[connection signal="trashPickedUp" from="Player4" to="." method="_on_Player4_trashPickedUp"]
+[connection signal="trashSegregated" from="Player4" to="." method="_on_Player4_trashSegregated"]
+[connection signal="updateScore" from="Player4" to="." method="_on_Player4_updateScore"]
+[connection signal="timeout" from="Game Control/hazardDropP1" to="Player1" method="_on_hazardDropP1_timeout"]
+[connection signal="timeout" from="Game Control/hazardDropP2" to="Player2" method="_on_hazardDropP2_timeout"]
+[connection signal="timeout" from="Game Control/hazardDropP3" to="Player3" method="_on_hazardDropP3_timeout"]
+[connection signal="timeout" from="Game Control/hazardDropP4" to="Player4" method="_on_hazardDropP4_timeout"]
+[connection signal="timeout" from="Game Control/p1CanMove" to="Player1" method="_on_p1CanMove_timeout"]
+[connection signal="timeout" from="Game Control/p2CanMove" to="Player2" method="_on_p2CanMove_timeout"]
+[connection signal="timeout" from="Game Control/p3CanMove" to="Player3" method="_on_p3CanMove_timeout"]
+[connection signal="timeout" from="Game Control/p4CanMove" to="Player4" method="_on_p4CanMove_timeout"]
+[connection signal="timeout" from="Game Control/p1Wait" to="Player1" method="_on_p1Wait_timeout"]
+[connection signal="timeout" from="Game Control/p2Wait" to="Player2" method="_on_p2Wait_timeout"]
+[connection signal="timeout" from="Game Control/p3Wait" to="Player3" method="_on_p3Wait_timeout"]
+[connection signal="timeout" from="Game Control/p4Wait" to="Player4" method="_on_p4Wait_timeout"]
+[connection signal="timeout" from="Difficulty/TrashSpawner" to="." method="_on_TrashSpawner_timeout"]
+[connection signal="timeout" from="Difficulty/AmountToSpawn" to="." method="_on_AmountSpawned_timeout"]
+[connection signal="body_entered" from="Segregation Area" to="Player2" method="_on_Segregation_Area_body_entered"]
+[connection signal="body_entered" from="Segregation Area" to="Player1" method="_on_Segregation_Area_body_entered"]
+[connection signal="body_entered" from="Segregation Area" to="Player4" method="_on_Segregation_Area_body_entered"]
+[connection signal="body_entered" from="Segregation Area" to="Player3" method="_on_Segregation_Area_body_entered"]
+[connection signal="body_exited" from="Segregation Area" to="Player2" method="_on_Segregation_Area_body_exited"]
+[connection signal="body_exited" from="Segregation Area" to="Player1" method="_on_Segregation_Area_body_exited"]
+[connection signal="body_exited" from="Segregation Area" to="Player4" method="_on_Segregation_Area_body_exited"]
+[connection signal="body_exited" from="Segregation Area" to="Player3" method="_on_Segregation_Area_body_exited"]
+[connection signal="body_entered" from="MetalRecycle" to="Player2" method="_on_MetalRecycle_body_entered"]
+[connection signal="body_entered" from="MetalRecycle" to="Player1" method="_on_MetalRecycle_body_entered"]
+[connection signal="body_entered" from="MetalRecycle" to="Player4" method="_on_MetalRecycle_body_entered"]
+[connection signal="body_entered" from="MetalRecycle" to="Player3" method="_on_MetalRecycle_body_entered"]
+[connection signal="body_exited" from="MetalRecycle" to="Player2" method="_on_MetalRecycle_body_exited"]
+[connection signal="body_exited" from="MetalRecycle" to="Player1" method="_on_MetalRecycle_body_exited"]
+[connection signal="body_exited" from="MetalRecycle" to="Player4" method="_on_MetalRecycle_body_exited"]
+[connection signal="body_exited" from="MetalRecycle" to="Player3" method="_on_MetalRecycle_body_exited"]
+[connection signal="body_entered" from="PlasticRecycle" to="Player2" method="_on_PlasticRecycle_body_entered"]
+[connection signal="body_entered" from="PlasticRecycle" to="Player1" method="_on_PlasticRecycle_body_entered"]
+[connection signal="body_entered" from="PlasticRecycle" to="Player4" method="_on_PlasticRecycle_body_entered"]
+[connection signal="body_entered" from="PlasticRecycle" to="Player3" method="_on_PlasticRecycle_body_entered"]
+[connection signal="body_exited" from="PlasticRecycle" to="Player2" method="_on_PlasticRecycle_body_exited"]
+[connection signal="body_exited" from="PlasticRecycle" to="Player1" method="_on_PlasticRecycle_body_exited"]
+[connection signal="body_exited" from="PlasticRecycle" to="Player4" method="_on_PlasticRecycle_body_exited"]
+[connection signal="body_exited" from="PlasticRecycle" to="Player3" method="_on_PlasticRecycle_body_exited"]
+[connection signal="body_entered" from="RubberRecycle" to="Player2" method="_on_RubberRecycle_body_entered"]
+[connection signal="body_entered" from="RubberRecycle" to="Player1" method="_on_RubberRecycle_body_entered"]
+[connection signal="body_entered" from="RubberRecycle" to="Player4" method="_on_RubberRecycle_body_entered"]
+[connection signal="body_entered" from="RubberRecycle" to="Player3" method="_on_RubberRecycle_body_entered"]
+[connection signal="body_exited" from="RubberRecycle" to="Player2" method="_on_RubberRecycle_body_exited"]
+[connection signal="body_exited" from="RubberRecycle" to="Player1" method="_on_RubberRecycle_body_exited"]
+[connection signal="body_exited" from="RubberRecycle" to="Player4" method="_on_RubberRecycle_body_exited"]
+[connection signal="body_exited" from="RubberRecycle" to="Player3" method="_on_RubberRecycle_body_exited"]
+[connection signal="body_entered" from="Dump" to="Player2" method="_on_Dump_body_entered"]
+[connection signal="body_entered" from="Dump" to="Player1" method="_on_Dump_body_entered"]
+[connection signal="body_entered" from="Dump" to="Player4" method="_on_Dump_body_entered"]
+[connection signal="body_entered" from="Dump" to="Player3" method="_on_Dump_body_entered"]
+[connection signal="body_exited" from="Dump" to="Player2" method="_on_Dump_body_exited"]
+[connection signal="body_exited" from="Dump" to="Player1" method="_on_Dump_body_exited"]
+[connection signal="body_exited" from="Dump" to="Player4" method="_on_Dump_body_exited"]
+[connection signal="body_exited" from="Dump" to="Player3" method="_on_Dump_body_exited"]
+[connection signal="body_entered" from="Center Area" to="Player2" method="_on_Center_Area_body_entered"]
+[connection signal="body_entered" from="Center Area" to="Player1" method="_on_Center_Area_body_entered"]
+[connection signal="body_entered" from="Center Area" to="Player4" method="_on_Center_Area_body_entered"]
+[connection signal="body_entered" from="Center Area" to="Player3" method="_on_Center_Area_body_entered"]
+[connection signal="body_exited" from="Center Area" to="Player2" method="_on_Center_Area_body_exited"]
+[connection signal="body_exited" from="Center Area" to="Player1" method="_on_Center_Area_body_exited"]
+[connection signal="body_exited" from="Center Area" to="Player4" method="_on_Center_Area_body_exited"]
+[connection signal="body_exited" from="Center Area" to="Player3" method="_on_Center_Area_body_exited"]
+[connection signal="timeout" from="segregationAnimTimer" to="." method="_on_segregationAnimTimer_timeout"]

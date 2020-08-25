@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/segregate_000007.obj-d79c6d333684764e4bb1c38beda5ee97.mesh"
+
+[deps]
+
+files=[ "res://.import/segregate_000007.obj-d79c6d333684764e4bb1c38beda5ee97.mesh" ]
+
+source_file="res://try2/segregate_000007.obj"
+dest_files=[ "res://.import/segregate_000007.obj-d79c6d333684764e4bb1c38beda5ee97.mesh", "res://.import/segregate_000007.obj-d79c6d333684764e4bb1c38beda5ee97.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

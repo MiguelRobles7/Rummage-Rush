@@ -1,0 +1,128 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Scripts/Player1.gd" type="Script" id=1]
+[ext_resource path="res://Players/player1.glb" type="PackedScene" id=2]
+[ext_resource path="res://Player Action/p1trashhold1.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Recycle Containers/p1metcon.gltf" type="PackedScene" id=4]
+[ext_resource path="res://Recycle Containers/p1plascon.gltf" type="PackedScene" id=5]
+[ext_resource path="res://Recycle Containers/p1rubcon.gltf" type="PackedScene" id=6]
+[ext_resource path="res://Player Action/p1holdSeg.gltf" type="PackedScene" id=7]
+[ext_resource path="res://PlayerAnims/p1grab.gltf" type="PackedScene" id=8]
+[ext_resource path="res://PlayerAnims/p1trashholdgrab.gltf" type="PackedScene" id=9]
+[ext_resource path="res://PlayerAnims/p1SegGrab.gltf" type="PackedScene" id=10]
+[ext_resource path="res://PlayerAnims/p1dizzy.gltf" type="PackedScene" id=11]
+[ext_resource path="res://PlayerAnims/p1TrashHold1.gltf" type="PackedScene" id=12]
+[ext_resource path="res://PlayerAnims/p1SegHoldDizzy.gltf" type="PackedScene" id=13]
+[ext_resource path="res://PlayerAnims/p1MetConDizzy.gltf" type="PackedScene" id=14]
+[ext_resource path="res://PlayerAnims/p1PlasticDizzy.gltf" type="PackedScene" id=15]
+[ext_resource path="res://PlayerAnims/p1RubConDizzy.gltf" type="PackedScene" id=16]
+[ext_resource path="res://Players/p1animTimer.gd" type="Script" id=17]
+[ext_resource path="res://Players/p1HazardTimer.gd" type="Script" id=18]
+
+[sub_resource type="BoxShape" id=1]
+
+[node name="Player1" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.2, 0, 0.0862186, 0 )
+shape = SubResource( 1 )
+
+[node name="PickUp" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, -50, 0, 1, -2.18557e-006, -0.000127792, 0.118495, 0.231726 )
+enabled = true
+cast_to = Vector3( 0, 0, 0.2 )
+collide_with_areas = true
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.232548 )
+light_energy = 0.1
+
+[node name="OmniLight2" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.200043, 0, -0.0105059 )
+light_energy = 0.1
+
+[node name="OmniLight3" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.112074, 0, -0.214588 )
+light_energy = 0.1
+
+[node name="OmniLight4" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.291408, 0, 0.0223494 )
+light_energy = 0.1
+
+[node name="OmniLight5" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0370018, 0.239997, 0.0223494 )
+light_energy = 0.1
+
+[node name="NoHold" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+
+[node name="GarbageHold" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00726493, 0, -0.00154153 )
+visible = false
+
+[node name="MetalHold" parent="." instance=ExtResource( 4 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.121557 )
+visible = false
+
+[node name="PlasticHold" parent="." instance=ExtResource( 5 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.214217 )
+visible = false
+
+[node name="RubberHold" parent="." instance=ExtResource( 6 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0.131267 )
+visible = false
+
+[node name="segHold" parent="." instance=ExtResource( 7 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0 )
+visible = false
+
+[node name="noHoldGrab" parent="." instance=ExtResource( 8 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00883353, 0, -0.00464469 )
+visible = false
+
+[node name="trashHoldGrab" parent="." instance=ExtResource( 9 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.009, 0, -0.005 )
+visible = false
+
+[node name="segTrashHoldGrab" parent="." instance=ExtResource( 10 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.011, 0, -0.00596976 )
+visible = false
+
+[node name="dizzyNoHold" parent="." instance=ExtResource( 11 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.0080626, 0, 0.00412989 )
+visible = false
+
+[node name="dizzyTrashHold" parent="." instance=ExtResource( 12 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00624418, -0.00118876, -0.00425127 )
+visible = false
+
+[node name="dizzySegTrashHold" parent="." instance=ExtResource( 13 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00884593, 0, 0.0207929 )
+visible = false
+
+[node name="dizzyPlasticHold" parent="." instance=ExtResource( 14 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00801277, 0, 0.210324 )
+visible = false
+
+[node name="dizzyMetalHold" parent="." instance=ExtResource( 15 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00817442, 0, 0.125503 )
+visible = false
+
+[node name="dizzyRubberHold" parent="." instance=ExtResource( 16 )]
+transform = Transform( 0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.00813198, 0, 0.126732 )
+visible = false
+
+[node name="p1animTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+script = ExtResource( 17 )
+
+[node name="p1HazardTimer" type="Timer" parent="."]
+one_shot = true
+script = ExtResource( 18 )
+[connection signal="dizzyAnimPlay" from="." to="p1HazardTimer" method="_on_Player1_dizzyAnimPlay"]
+[connection signal="p1animTimerStart" from="." to="p1animTimer" method="_on_Player1_p1animTimerStart"]
+[connection signal="timeout" from="p1animTimer" to="." method="_on_p1animTimer_timeout"]
+[connection signal="timeout" from="p1HazardTimer" to="." method="_on_p1HazardTimer_timeout"]

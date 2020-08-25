@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://center/center remake2.glb" type="PackedScene" id=1]
+[ext_resource path="res://center/center remake1.glb" type="PackedScene" id=2]
+[ext_resource path="res://center/trash 1.gltf" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "center"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scene Root:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Scene Root3:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.997222, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.0950966, 1.01308, -1.97787 ), Vector3( -0.0950966, 1.01308, -1.46332 ), Vector3( -0.0950966, 0.693071, -1.09113 ), Vector3( -0.0950966, 0.52741, -1.09113 ) ]
+}
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Scene Root2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.21021, -0.545695, 5.22611 )
+
+[node name="Scene Root" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.212, -0.534, 5.232 )
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/center = SubResource( 1 )
+
+[node name="Scene Root3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.0950966, 0.52741, -1.09113 )

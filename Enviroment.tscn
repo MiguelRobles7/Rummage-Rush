@@ -1,0 +1,119 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://map2.gltf" type="PackedScene" id=1]
+[ext_resource path="res://try/MapWithSprites.gltf" type="PackedScene" id=2]
+[ext_resource path="res://try/MapNoSprite.gltf" type="PackedScene" id=3]
+[ext_resource path="res://try/Belt.gltf" type="PackedScene" id=4]
+[ext_resource path="res://Environment/FINALMapping-3.glb" type="PackedScene" id=5]
+[ext_resource path="res://Environment/FINALMapping-4.glb" type="PackedScene" id=6]
+[ext_resource path="res://Environment/FINALMapping-5.glb" type="PackedScene" id=7]
+[ext_resource path="res://Environment/FINALMapping-6.glb" type="PackedScene" id=8]
+[ext_resource path="res://Environment/FINALMapping-7.glb" type="PackedScene" id=9]
+[ext_resource path="res://Environment/FINALMapping-8.glb" type="PackedScene" id=10]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 0.985637, 1, 1 )
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="ProceduralSky" id=4]
+ground_bottom_color = Color( 0.501961, 0.74902, 0.996078, 1 )
+ground_horizon_color = Color( 0.756863, 0.941176, 1, 1 )
+
+[sub_resource type="Environment" id=5]
+background_mode = 2
+background_sky = SubResource( 4 )
+
+[node name="Environment" type="Spatial"]
+
+[node name="Map" type="StaticBody" parent="."]
+transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 1.19209e-007, 0 )
+
+[node name="Scene Root" parent="Map" instance=ExtResource( 1 )]
+transform = Transform( 0.035, 0, 0, 0, 1.004, 0, 0, 0, 0.035, -0.001, -1.4, -0.001 )
+visible = false
+
+[node name="Floor" type="CollisionShape" parent="Map"]
+transform = Transform( 0.3, 0, 0, 0, 0.1, 0, 0, 0, 0.3, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Right Wall" type="CollisionShape" parent="Map"]
+transform = Transform( 0.001, 0, 0, 0, 10, 0, 0, 0, 0.12, 0.123929, 1.49999, 0.0806182 )
+shape = SubResource( 2 )
+
+[node name="Left Wall" type="CollisionShape" parent="Map"]
+transform = Transform( 0.001, 0, 0, 0, 10, 0, 0, 0, 0.12, -0.162915, 1.49999, 0.0803178 )
+shape = SubResource( 2 )
+
+[node name="Bottom Wall" type="CollisionShape" parent="Map"]
+transform = Transform( -4.37114e-010, 0.000174533, 0.156, 0, 9.99999, -2.72271e-006, -0.00999999, -7.62907e-012, -6.81897e-009, -0.0277471, 1.49999, 0.180743 )
+shape = SubResource( 2 )
+
+[node name="Top Right Wall" type="CollisionShape" parent="Map"]
+transform = Transform( -8.74228e-010, 0, 0.053, 0, 10, 0, -0.02, 0, -2.31671e-009, 0.0996151, 1.5, -0.0179603 )
+shape = SubResource( 2 )
+
+[node name="Top Center Wall" type="CollisionShape" parent="Map"]
+transform = Transform( -4.37114e-011, 0.000174533, 0.06, 0, 10, -1.0472e-006, -0.001, -7.62908e-012, -2.62268e-009, -0.0127658, 1.49999, -0.032793 )
+shape = SubResource( 2 )
+
+[node name="Top Left Wall 2" type="CollisionShape" parent="Map"]
+transform = Transform( -6.55671e-010, 0, 0.04, 0, 10, 0, -0.015, 0, -1.74846e-009, -0.123566, 1.47502, -0.013819 )
+shape = SubResource( 2 )
+
+[node name="Top Left Wall 3" type="CollisionShape" parent="Map"]
+transform = Transform( -1.31134e-010, 0, 0.01, 0, 10, 0, -0.003, 0, -4.37114e-010, -0.0730968, 1.47502, -0.0180502 )
+shape = SubResource( 2 )
+
+[node name="Scene Root2" parent="Map" instance=ExtResource( 2 )]
+transform = Transform( 0.0333333, 0, 0, 0, 1, 0, 0, 0, 0.0333333, -0.21, -0.695, 0.238 )
+visible = false
+
+[node name="Scene Root3" parent="Map" instance=ExtResource( 3 )]
+transform = Transform( 0.033, 0, 0, 0, 1, 0, 0, 0, 0.033, -0.21, -0.695, 0.238 )
+visible = false
+
+[node name="CollisionShape" type="CollisionShape" parent="Map"]
+transform = Transform( 0.023, 0, 0, 0, 0.1, 0, 0, 0, 0.01, -0.0341285, 0.0299903, 0.106939 )
+shape = SubResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 12, 0 )
+light_energy = 1.5
+
+[node name="Position3D" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59065, 1.65955, 1.83296 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.692558, 0.721362, 0, -0.721362, 0.692558, -0.08, 4, 7 )
+visible = false
+environment = SubResource( 5 )
+
+[node name="Camera2" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.017588, 0.999845, 0, -0.999845, 0.017588, 0, 9.12919, 0.388176 )
+visible = false
+
+[node name="Scene Root" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.3923, -0.732457, 7.18705 )
+
+[node name="AroundEnviornment" type="Spatial" parent="."]
+
+[node name="Scene Root3" parent="AroundEnviornment" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.031477, -0.093, 0.876558 )
+
+[node name="Scene Root" parent="AroundEnviornment" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0075739, -0.093, 0.880514 )
+
+[node name="Scene Root4" parent="AroundEnviornment" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0697651, -0.093, 0.912671 )
+
+[node name="Scene Root5" parent="AroundEnviornment" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.241038, -0.249541, 0.855555 )
+
+[node name="Scene Root6" parent="AroundEnviornment" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.019737, -0.093, 0.897535 )
+
+[node name="Scene Root7" parent="AroundEnviornment" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0274479, -0.093, 0.894955 )

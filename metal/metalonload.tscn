@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://metal/Metal 2.glb" type="PackedScene" id=1]
+[ext_resource path="res://metal/conmetfull.gltf" type="PackedScene" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "metal"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Scene Root2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Scene Root4:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.00720781, 0.497222 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -1.64786, 0.386635, -0.645613 ), Vector3( -0.786464, 0.386635, -0.645613 ) ]
+}
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Scene Root" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2708, -0.70567, 3.9501 )
+
+[node name="Scene Root2" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.2666, -0.703853, 3.95131 )
+visible = false
+
+[node name="Scene Root4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.25, 0, 0, 0, -1.09278e-008, -0.25, 0, 0.25, -1.09278e-008, -0.786464, 0.386635, -0.645613 )
+
+[node name="Hello" type="AnimationPlayer" parent="."]
+anims/metal = SubResource( 1 )
