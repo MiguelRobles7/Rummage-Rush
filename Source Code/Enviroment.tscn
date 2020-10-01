@@ -29,7 +29,7 @@ background_sky = SubResource( 4 )
 [node name="Environment" type="Spatial"]
 
 [node name="Map" type="StaticBody" parent="."]
-transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 1.19209e-007, 0 )
+transform = Transform( 30, 0, 0, 0, 1, 0, 0, 0, 30, 0, 1.19209e-07, 0 )
 
 [node name="Scene Root" parent="Map" instance=ExtResource( 1 )]
 transform = Transform( 0.035, 0, 0, 0, 1.004, 0, 0, 0, 0.035, -0.001, -1.4, -0.001 )
@@ -48,23 +48,23 @@ transform = Transform( 0.001, 0, 0, 0, 10, 0, 0, 0, 0.12, -0.162915, 1.49999, 0.
 shape = SubResource( 2 )
 
 [node name="Bottom Wall" type="CollisionShape" parent="Map"]
-transform = Transform( -4.37114e-010, 0.000174533, 0.156, 0, 9.99999, -2.72271e-006, -0.00999999, -7.62907e-012, -6.81897e-009, -0.0277471, 1.49999, 0.180743 )
+transform = Transform( -4.37114e-10, 0.000174533, 0.156, 0, 9.99999, -2.72271e-06, -0.00999999, -7.62907e-12, -6.81897e-09, -0.0277471, 1.49999, 0.180743 )
 shape = SubResource( 2 )
 
 [node name="Top Right Wall" type="CollisionShape" parent="Map"]
-transform = Transform( -8.74228e-010, 0, 0.053, 0, 10, 0, -0.02, 0, -2.31671e-009, 0.0996151, 1.5, -0.0179603 )
+transform = Transform( -8.74228e-10, 0, 0.053, 0, 10, 0, -0.02, 0, -2.31671e-09, 0.0996151, 1.5, -0.0179603 )
 shape = SubResource( 2 )
 
 [node name="Top Center Wall" type="CollisionShape" parent="Map"]
-transform = Transform( -4.37114e-011, 0.000174533, 0.06, 0, 10, -1.0472e-006, -0.001, -7.62908e-012, -2.62268e-009, -0.0127658, 1.49999, -0.032793 )
+transform = Transform( -4.37114e-11, 0.000174533, 0.06, 0, 10, -1.0472e-06, -0.001, -7.62908e-12, -2.62268e-09, -0.0127658, 1.49999, -0.032793 )
 shape = SubResource( 2 )
 
 [node name="Top Left Wall 2" type="CollisionShape" parent="Map"]
-transform = Transform( -6.55671e-010, 0, 0.04, 0, 10, 0, -0.015, 0, -1.74846e-009, -0.123566, 1.47502, -0.013819 )
+transform = Transform( -6.55671e-10, 0, 0.04, 0, 10, 0, -0.015, 0, -1.74846e-09, -0.123566, 1.47502, -0.013819 )
 shape = SubResource( 2 )
 
 [node name="Top Left Wall 3" type="CollisionShape" parent="Map"]
-transform = Transform( -1.31134e-010, 0, 0.01, 0, 10, 0, -0.003, 0, -4.37114e-010, -0.0730968, 1.47502, -0.0180502 )
+transform = Transform( -1.31134e-10, 0, 0.01, 0, 10, 0, -0.003, 0, -4.37114e-10, -0.0730968, 1.47502, -0.0180502 )
 shape = SubResource( 2 )
 
 [node name="Scene Root2" parent="Map" instance=ExtResource( 2 )]
@@ -80,7 +80,7 @@ transform = Transform( 0.023, 0, 0, 0, 0.1, 0, 0, 0, 0.01, -0.0341285, 0.0299903
 shape = SubResource( 3 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-008, 1, 0, -1, -4.37114e-008, 0, 12, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 12, 0 )
 light_energy = 1.5
 
 [node name="Position3D" type="Position3D" parent="."]
