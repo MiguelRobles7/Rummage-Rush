@@ -15,4 +15,5 @@ dest_files=[ "res://.import/Trash2.obj-67c4c18513bdc0f0ab7e93336b7c8bf6.mesh", "
 
 generate_tangents=true
 scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
 optimize_mesh=true
