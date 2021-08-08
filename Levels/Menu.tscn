@@ -5,8 +5,8 @@
 [ext_resource path="res://fonts/Comic Kings.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=4]
 [ext_resource path="res://Levels/ColorRect.gd" type="Script" id=5]
-[ext_resource path="res://music/5344221538025472.wav" type="AudioStream" id=6]
-[ext_resource path="res://music/button.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio Files/5344221538025472.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio Files/button.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40

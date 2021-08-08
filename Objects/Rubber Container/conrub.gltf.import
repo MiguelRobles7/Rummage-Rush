@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/conmetfull.gltf-e75c6d9c9af10e54cef1c5d1b464c10c.scn"
+path="res://.import/conrub.gltf-a5446bd26655ccd51c1dbdb4c6026df7.scn"
 
 [deps]
 
-source_file="res://Containers/Metal Container/conmetfull.gltf"
-dest_files=[ "res://.import/conmetfull.gltf-e75c6d9c9af10e54cef1c5d1b464c10c.scn" ]
+source_file="res://Objects/Rubber Container/conrub.gltf"
+dest_files=[ "res://.import/conrub.gltf-a5446bd26655ccd51c1dbdb4c6026df7.scn" ]
 
 [params]
 
