@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Plastic.gltf-c68c4562d46bbf2ff2441f8ff6c0d28b.scn"
+path="res://.import/MapWithSprites.gltf-2858015478c7f0fcd702be258c8c4784.scn"
 
 [deps]
 
-source_file="res://try/Plastic.gltf"
-dest_files=[ "res://.import/Plastic.gltf-c68c4562d46bbf2ff2441f8ff6c0d28b.scn" ]
+source_file="res://Objects/Environment/MapWithSprites.gltf"
+dest_files=[ "res://.import/MapWithSprites.gltf-2858015478c7f0fcd702be258c8c4784.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Rubber.gltf-539db56e507d5e028e016e47e6e3da76.scn"
+path="res://.import/MapNoSprite.gltf-915925a435c7c26f163f74aec9eadfb8.scn"
 
 [deps]
 
-source_file="res://try/Rubber.gltf"
-dest_files=[ "res://.import/Rubber.gltf-539db56e507d5e028e016e47e6e3da76.scn" ]
+source_file="res://Objects/Environment/MapNoSprite.gltf"
+dest_files=[ "res://.import/MapNoSprite.gltf-915925a435c7c26f163f74aec9eadfb8.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
