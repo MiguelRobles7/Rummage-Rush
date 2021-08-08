@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/p1metcon.gltf-b8c26ce1f0f2ee76c275bb60f7ab39f7.scn"
+path="res://.import/p1metcon.gltf-81604322a849c52059ac6bcc39ff61e1.scn"
 
 [deps]
 
-source_file="res://Recycle Containers/p1metcon.gltf"
-dest_files=[ "res://.import/p1metcon.gltf-b8c26ce1f0f2ee76c275bb60f7ab39f7.scn" ]
+source_file="res://Animations/player1_animations/p1metcon.gltf"
+dest_files=[ "res://.import/p1metcon.gltf-81604322a849c52059ac6bcc39ff61e1.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

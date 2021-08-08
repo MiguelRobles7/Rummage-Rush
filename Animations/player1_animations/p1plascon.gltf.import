@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/p1rubcon.gltf-6cf7b465916424e0f5100c909ba40326.scn"
+path="res://.import/p1plascon.gltf-cf6daf62fe5bb775d5f75a00ca613fd6.scn"
 
 [deps]
 
-source_file="res://Recycle Containers/p1rubcon.gltf"
-dest_files=[ "res://.import/p1rubcon.gltf-6cf7b465916424e0f5100c909ba40326.scn" ]
+source_file="res://Animations/player1_animations/p1plascon.gltf"
+dest_files=[ "res://.import/p1plascon.gltf-cf6daf62fe5bb775d5f75a00ca613fd6.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
