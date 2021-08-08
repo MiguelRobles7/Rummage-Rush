@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Scripts/DumpTrash.gd" type="Script" id=1]
+[ext_resource path="res://Objects/DumpTrash.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Environment/Segregate.gltf" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Sprites/segmeter_0.gltf" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Sprites/segmeter_1.gltf" type="PackedScene" id=4]

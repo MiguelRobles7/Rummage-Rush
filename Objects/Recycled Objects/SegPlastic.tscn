@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scripts/SegPlastic.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Recycled Objects/SegPlastic.gd" type="Script" id=1]
 [ext_resource path="res://Objects/Recycled Objects/plastic bottle.gltf" type="PackedScene" id=2]
 
 [sub_resource type="SphereShape" id=1]

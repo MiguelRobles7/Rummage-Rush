@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Center Trash/trash 2.gltf" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/Trash.gd" type="Script" id=2]
+[ext_resource path="res://Objects/Center Trash/Trash.gd" type="Script" id=2]
 
 [sub_resource type="SpatialMaterial" id=1]
 albedo_color = Color( 0, 0, 0, 1 )
