@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Objects/Recycling Areas/Rubber 2.glb" type="PackedScene" id=1]
+[ext_resource path="res://Objects/Recycling Areas/Rubber 1.glb" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Rubber Container/conrubfull.gltf" type="PackedScene" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "rubber"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Scene Root2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Scene Root:translation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Scene Root3:translation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.00524227, 0.487374 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -0.955819, 0.421406, -0.10313 ), Vector3( -0.0594743, 0.421406, -0.10313 ) ]
+}
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Scene Root" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.56671, -0.558351, 2.94184 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/rubber = SubResource( 1 )
+
+[node name="Scene Root2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.57463, -0.549881, 2.94403 )
+visible = false
+
+[node name="Scene Root3" parent="." instance=ExtResource( 3 )]
+transform = Transform( 0.25, 0, 0, 0, -1.09278e-08, -0.25, 0, 0.25, -1.09278e-08, -0.0594743, 0.421406, -0.10313 )
