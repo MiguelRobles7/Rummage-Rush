@@ -119,5 +119,5 @@ stream = ExtResource( 7 )
 [connection signal="playButton" from="StartGame" to="." method="_on_StartGame_playButton"]
 [connection signal="pressed" from="StartGame" to="StartGame" method="_on_StartGame_pressed"]
 [connection signal="animFinish" from="StartGame/ColorRect" to="." method="_on_ColorRect_animFinish"]
-[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="StartGame/ColorRect" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

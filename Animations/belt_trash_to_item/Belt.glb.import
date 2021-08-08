@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/rubber.gltf-342585c5316faae75a33c49b025cc055.scn"
+path="res://.import/Belt.glb-64b4f3e1c7dfa8ec457765160d16121d.scn"
 
 [deps]
 
-source_file="res://belt/rubber.gltf"
-dest_files=[ "res://.import/rubber.gltf-342585c5316faae75a33c49b025cc055.scn" ]
+source_file="res://Animations/belt_trash_to_item/Belt.glb"
+dest_files=[ "res://.import/Belt.glb-64b4f3e1c7dfa8ec457765160d16121d.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

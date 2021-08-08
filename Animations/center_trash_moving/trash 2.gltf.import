@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Belt - Copy.glb-0b0d47462311469696af6c25cf8ae2cb.scn"
+path="res://.import/trash 2.gltf-8407e418ef42497f441bc42e06a20dee.scn"
 
 [deps]
 
-source_file="res://belt/Belt - Copy.glb"
-dest_files=[ "res://.import/Belt - Copy.glb-0b0d47462311469696af6c25cf8ae2cb.scn" ]
+source_file="res://Animations/center_trash_moving/trash 2.gltf"
+dest_files=[ "res://.import/trash 2.gltf-8407e418ef42497f441bc42e06a20dee.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

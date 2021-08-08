@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/metalContainer.gd" type="Script" id=1]
-[ext_resource path="res://Containers/conmet.gltf" type="PackedScene" id=2]
-[ext_resource path="res://Containers/conmethalf.gltf" type="PackedScene" id=3]
-[ext_resource path="res://Containers/conmetfull.gltf" type="PackedScene" id=4]
+[ext_resource path="res://Objects/Metal Container/conmet.gltf" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Metal Container/conmethalf.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Objects/Metal Container/conmetfull.gltf" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Sprites/meter_0.gltf" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Sprites/meter_1.gltf" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Sprites/meter_2.gltf" type="PackedScene" id=7]

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/metal.gltf-28fe4a1814effd30d687bd0ab4127a9c.scn"
+path="res://.import/center remake1.glb-bedbaf6c197c108e48e2e0e189e4508c.scn"
 
 [deps]
 
-source_file="res://belt/metal.gltf"
-dest_files=[ "res://.import/metal.gltf-28fe4a1814effd30d687bd0ab4127a9c.scn" ]
+source_file="res://Animations/center_trash_moving/center remake1.glb"
+dest_files=[ "res://.import/center remake1.glb-bedbaf6c197c108e48e2e0e189e4508c.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

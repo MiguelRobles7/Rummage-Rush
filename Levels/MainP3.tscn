@@ -35,7 +35,7 @@
 [ext_resource path="res://Facilities/Dump.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Facilities/Dump.gd" type="Script" id=34]
 [ext_resource path="res://music/Happy_Marimba_Royalty-Free_Background_Music_-_NO_COPYRIGHT.wav" type="AudioStream" id=35]
-[ext_resource path="res://Center.tscn" type="PackedScene" id=36]
+[ext_resource path="res://Objects/Center.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Menu UI Assets/trask.png" type="Texture" id=37]
 [ext_resource path="res://Menu UI Assets/trashbad.png" type="Texture" id=38]
 [ext_resource path="res://Menu UI Assets/trashgood.png" type="Texture" id=39]

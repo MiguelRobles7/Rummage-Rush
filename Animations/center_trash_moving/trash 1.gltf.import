@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/center remake2.glb-18d27b5977d188c5ebfa83aae2559d50.scn"
+path="res://.import/trash 1.gltf-ffc048241880b753eb00eef9ddcfb1f0.scn"
 
 [deps]
 
-source_file="res://center/center remake2.glb"
-dest_files=[ "res://.import/center remake2.glb-18d27b5977d188c5ebfa83aae2559d50.scn" ]
+source_file="res://Animations/center_trash_moving/trash 1.gltf"
+dest_files=[ "res://.import/trash 1.gltf-ffc048241880b753eb00eef9ddcfb1f0.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
