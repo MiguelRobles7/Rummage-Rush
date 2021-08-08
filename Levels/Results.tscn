@@ -2,7 +2,7 @@
 
 [ext_resource path="res://UI/Results.gd" type="Script" id=1]
 [ext_resource path="res://Menu UI Assets/newresultadjust.png" type="Texture" id=2]
-[ext_resource path="res://fonts/8-BIT WONDER.TTF" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Fonts/8-BIT WONDER.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
