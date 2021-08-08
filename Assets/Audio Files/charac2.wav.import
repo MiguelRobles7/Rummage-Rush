@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/charac2.wav-1939e3ce6650eff61711e5af65f401d2.sample"
+
+[deps]
+
+source_file="res://Assets/Audio Files/charac2.wav"
+dest_files=[ "res://.import/charac2.wav-1939e3ce6650eff61711e5af65f401d2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

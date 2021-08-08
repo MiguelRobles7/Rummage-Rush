@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/dumping_in_dump.wav-02ed5131f8b10d4f7e5bf76f7e45224c.sample"
+
+[deps]
+
+source_file="res://Assets/Audio Files/dumping_in_dump.wav"
+dest_files=[ "res://.import/dumping_in_dump.wav-02ed5131f8b10d4f7e5bf76f7e45224c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
