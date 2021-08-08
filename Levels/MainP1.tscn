@@ -5,7 +5,7 @@
 [ext_resource path="res://Containers/plasticContainer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Containers/rubberContainer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Enviroment.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Players/Player1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/Players/Player1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/Sprites/p1board.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Sprites/trashicon.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Fonts/8-BIT WONDER.TTF" type="DynamicFontData" id=9]

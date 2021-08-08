@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/p4.gltf-74253de8870991e62306831f1080fac6.scn"
+path="res://.import/p3.gltf-e8ae7cebc241be821f1a6df0882be4f2.scn"
 
 [deps]
 
-source_file="res://Players/p4.gltf"
-dest_files=[ "res://.import/p4.gltf-74253de8870991e62306831f1080fac6.scn" ]
+source_file="res://Objects/Players/p3.gltf"
+dest_files=[ "res://.import/p3.gltf-e8ae7cebc241be821f1a6df0882be4f2.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/player1.glb-62d79acd9f3492c7546e737b126c50cc.scn"
+path="res://.import/p3trashhold4.gltf-4a629b7dcc02d1a59bcaa856f6e73c94.scn"
 
 [deps]
 
-source_file="res://Players/player1.glb"
-dest_files=[ "res://.import/player1.glb-62d79acd9f3492c7546e737b126c50cc.scn" ]
+source_file="res://Animations/player4_animations/p3trashhold4.gltf"
+dest_files=[ "res://.import/p3trashhold4.gltf-4a629b7dcc02d1a59bcaa856f6e73c94.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

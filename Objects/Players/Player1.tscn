@@ -1,7 +1,7 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Scripts/Player1.gd" type="Script" id=1]
-[ext_resource path="res://Players/player1.glb" type="PackedScene" id=2]
+[ext_resource path="res://Objects/Players/Player1.gd" type="Script" id=1]
+[ext_resource path="res://Objects/Players/player1.glb" type="PackedScene" id=2]
 [ext_resource path="res://Animations/player1_animations/p1trashhold1.gltf" type="PackedScene" id=3]
 [ext_resource path="res://Animations/player1_animations/p1metcon.gltf" type="PackedScene" id=4]
 [ext_resource path="res://Animations/player1_animations/p1plascon.gltf" type="PackedScene" id=5]
@@ -16,8 +16,8 @@
 [ext_resource path="res://Animations/player1_animations/p1MetConDizzy.gltf" type="PackedScene" id=14]
 [ext_resource path="res://Animations/player1_animations/p1PlasticDizzy.gltf" type="PackedScene" id=15]
 [ext_resource path="res://Animations/player1_animations/p1RubConDizzy.gltf" type="PackedScene" id=16]
-[ext_resource path="res://Players/p1animTimer.gd" type="Script" id=17]
-[ext_resource path="res://Players/p1HazardTimer.gd" type="Script" id=18]
+[ext_resource path="res://Objects/Players/p1animTimer.gd" type="Script" id=17]
+[ext_resource path="res://Objects/Players/p1HazardTimer.gd" type="Script" id=18]
 
 [sub_resource type="BoxShape" id=1]
 
