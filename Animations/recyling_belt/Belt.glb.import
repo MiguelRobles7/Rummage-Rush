@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Belt - Copy.glb-99595d4d52e4c0a52d6f0b476fcb020d.scn"
+path="res://.import/Belt.glb-50356f8a5b9dad524e1b1f2b03f46912.scn"
 
 [deps]
 
-source_file="res://Animations/belt_trash_to_item/Belt - Copy.glb"
-dest_files=[ "res://.import/Belt - Copy.glb-99595d4d52e4c0a52d6f0b476fcb020d.scn" ]
+source_file="res://Animations/recyling_belt/Belt.glb"
+dest_files=[ "res://.import/Belt.glb-50356f8a5b9dad524e1b1f2b03f46912.scn" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/rubber.gltf-6b8a737838e54e39101bfcd1dd1d5e40.scn"
+path="res://.import/Segregate1.glb-faaabdc289d51517916937713126f601.scn"
 
 [deps]
 
-source_file="res://Animations/belt_trash_to_item/rubber.gltf"
-dest_files=[ "res://.import/rubber.gltf-6b8a737838e54e39101bfcd1dd1d5e40.scn" ]
+source_file="res://Animations/segregation_belt/Segregate1.glb"
+dest_files=[ "res://.import/Segregate1.glb-faaabdc289d51517916937713126f601.scn" ]
 
 [params]
 

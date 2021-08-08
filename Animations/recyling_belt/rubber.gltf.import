@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Segregate1.glb-84a71bd113da8bec2bad9e5698768364.scn"
+path="res://.import/rubber.gltf-c7b2cff6e3d8d3ef3995e054975fcc7e.scn"
 
 [deps]
 
-source_file="res://segregation/Segregate1.glb"
-dest_files=[ "res://.import/Segregate1.glb-84a71bd113da8bec2bad9e5698768364.scn" ]
+source_file="res://Animations/recyling_belt/rubber.gltf"
+dest_files=[ "res://.import/rubber.gltf-c7b2cff6e3d8d3ef3995e054975fcc7e.scn" ]
 
 [params]
 
@@ -16,6 +16,7 @@ nodes/root_name="Scene Root"
 nodes/root_scale=1.0
 nodes/custom_script=""
 nodes/storage=0
+nodes/use_legacy_names=true
 materials/location=1
 materials/storage=1
 materials/keep_on_reimport=true
@@ -24,6 +25,7 @@ meshes/ensure_tangents=true
 meshes/storage=0
 meshes/light_baking=0
 meshes/lightmap_texel_size=0.1
+skins/use_named_skins=true
 external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15

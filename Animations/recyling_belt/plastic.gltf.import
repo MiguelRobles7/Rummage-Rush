@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/metal.gltf-5c175a11ab4f4c6c181bc4295af63b2b.scn"
+path="res://.import/plastic.gltf-98bea75213dde88fe14cce3aa0afd175.scn"
 
 [deps]
 
-source_file="res://Animations/belt_trash_to_item/metal.gltf"
-dest_files=[ "res://.import/metal.gltf-5c175a11ab4f4c6c181bc4295af63b2b.scn" ]
+source_file="res://Animations/recyling_belt/plastic.gltf"
+dest_files=[ "res://.import/plastic.gltf-98bea75213dde88fe14cce3aa0afd175.scn" ]
 
 [params]
 

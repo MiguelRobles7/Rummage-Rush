@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/plastic.gltf-396f54a3ab7911216e0bdfe0bb704e65.scn"
+path="res://.import/trash 1.gltf-3b0ed609798891645ab3acc5e5f5e26d.scn"
 
 [deps]
 
-source_file="res://Animations/belt_trash_to_item/plastic.gltf"
-dest_files=[ "res://.import/plastic.gltf-396f54a3ab7911216e0bdfe0bb704e65.scn" ]
+source_file="res://Animations/segregation_belt/trash 1.gltf"
+dest_files=[ "res://.import/trash 1.gltf-3b0ed609798891645ab3acc5e5f5e26d.scn" ]
 
 [params]
 

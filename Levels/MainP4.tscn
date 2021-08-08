@@ -45,7 +45,7 @@
 [ext_resource path="res://belt/beltMetal.tscn" type="PackedScene" id=43]
 [ext_resource path="res://belt/beltRubber.tscn" type="PackedScene" id=44]
 [ext_resource path="res://belt/beltPlastic.tscn" type="PackedScene" id=45]
-[ext_resource path="res://segregation/Segregation.tscn" type="PackedScene" id=46]
+[ext_resource path="res://Animations/segregation_belt/Segregation.tscn" type="PackedScene" id=46]
 [ext_resource path="res://segregationAnimTimer.gd" type="Script" id=47]
 
 [sub_resource type="DynamicFont" id=1]
