@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Sprites/butleftidle.png" type="Texture" id=6]
 [ext_resource path="res://Levels/buttonRightTimer.gd" type="Script" id=7]
 [ext_resource path="res://Levels/buttonLeftTimer.gd" type="Script" id=8]
-[ext_resource path="res://music/5344221538025472.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio Files/5344221538025472.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/Sprites/startidle.png" type="Texture" id=10]
 [ext_resource path="res://Levels/buttonStart.gd" type="Script" id=11]
 [ext_resource path="res://Assets/Sprites/instruct_Update.png" type="Texture" id=12]
@@ -17,7 +17,7 @@
 [ext_resource path="res://Assets/Sprites/controls.png" type="Texture" id=15]
 [ext_resource path="res://Assets/Sprites/rules_1.png" type="Texture" id=16]
 [ext_resource path="res://Assets/Sprites/rule2.png" type="Texture" id=17]
-[ext_resource path="res://music/button.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Audio Files/button.wav" type="AudioStream" id=18]
 [ext_resource path="res://Levels/waitMe.gd" type="Script" id=19]
 
 [sub_resource type="DynamicFont" id=1]
