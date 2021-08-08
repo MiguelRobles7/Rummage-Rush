@@ -1,0 +1,123 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Levels/Menu.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/poster.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Comic Kings.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=4]
+[ext_resource path="res://Levels/ColorRect.gd" type="Script" id=5]
+[ext_resource path="res://music/5344221538025472.wav" type="AudioStream" id=6]
+[ext_resource path="res://music/button.wav" type="AudioStream" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+outline_size = 4
+outline_color = Color( 0.0745098, 0.411765, 0.0980392, 0 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "blinking"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.862745, 0.92549, 0.203922, 0 ), Color( 0.862745, 0.92549, 0.203922, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_fonts/font:outline_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0745098, 0.411765, 0.0980392, 0 ), Color( 0.0745098, 0.411765, 0.0980392, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0980392, 0.0901961, 0.0901961, 0 ), Color( 0.0980392, 0.0901961, 0.0901961, 0.882353 ) ]
+}
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+margin_right = 1560.0
+margin_bottom = 870.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="StartGame" type="Button" parent="."]
+margin_left = 1113.71
+margin_top = 725.71
+margin_right = 1670.71
+margin_bottom = 805.71
+rect_scale = Vector2( 0.910022, 1.31418 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.862745, 0.92549, 0.203922, 0 )
+custom_colors/font_color_hover = Color( 0.792157, 0.286275, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.615686, 0.0666667, 0.768627, 1 )
+text = "Press Start!"
+flat = true
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StartGame"]
+anims/blinking = SubResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="StartGame"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1224.0
+margin_top = -552.0
+margin_right = -66.0
+margin_bottom = 33.0
+color = Color( 0.0980392, 0.0901961, 0.0901961, 0 )
+script = ExtResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StartGame/ColorRect"]
+anims/fadeIn = SubResource( 3 )
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[connection signal="playButton" from="StartGame" to="." method="_on_StartGame_playButton"]
+[connection signal="pressed" from="StartGame" to="StartGame" method="_on_StartGame_pressed"]
+[connection signal="animFinish" from="StartGame/ColorRect" to="." method="_on_ColorRect_animFinish"]
+[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="StartGame/ColorRect" method="_on_AnimationPlayer_animation_finished"]

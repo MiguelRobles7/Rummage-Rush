@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Galavanting_Through_Low_Rez_Forests.mp3-88a03e5e5d0a386ede7a670cd7270280.mp3str"
+
+[deps]
+
+source_file="res://Galavanting_Through_Low_Rez_Forests.mp3"
+dest_files=[ "res://.import/Galavanting_Through_Low_Rez_Forests.mp3-88a03e5e5d0a386ede7a670cd7270280.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
