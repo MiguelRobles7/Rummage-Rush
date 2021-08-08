@@ -34,7 +34,7 @@
 [ext_resource path="res://Objects/Recycling Areas/RubberRecycle.tscn" type="PackedScene" id=32]
 [ext_resource path="res://Objects/Dump.tscn" type="PackedScene" id=33]
 [ext_resource path="res://Objects/Dump.gd" type="Script" id=34]
-[ext_resource path="res://Assets/Audio Files/Happy_Marimba_Royalty-Free_Background_Music_-_NO_COPYRIGHT.wav" type="AudioStream" id=35]
+[ext_resource path="res://Assets/Audio Files/in_game_music.wav" type="AudioStream" id=35]
 [ext_resource path="res://Objects/Center.tscn" type="PackedScene" id=36]
 [ext_resource path="res://Assets/Sprites/trask.png" type="Texture" id=37]
 [ext_resource path="res://Assets/Sprites/trashbad.png" type="Texture" id=38]
@@ -43,7 +43,7 @@
 [ext_resource path="res://Animations/recyling_belt/metal_belt.tscn" type="PackedScene" id=41]
 [ext_resource path="res://Animations/recyling_belt/rubber_belt.tscn" type="PackedScene" id=42]
 [ext_resource path="res://Animations/recyling_belt/plastic_belt.tscn" type="PackedScene" id=43]
-[ext_resource path="res://Animations/segregation_belt/Segregation.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Animations/segregation_belt/segregation.tscn" type="PackedScene" id=44]
 [ext_resource path="res://Levels/Main_segregationAnimTimer.gd" type="Script" id=45]
 
 [sub_resource type="DynamicFont" id=1]

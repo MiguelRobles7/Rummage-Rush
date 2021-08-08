@@ -5,8 +5,8 @@
 [ext_resource path="res://Assets/Fonts/Comic Kings.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Levels/Menu_Button.gd" type="Script" id=4]
 [ext_resource path="res://Levels/ColorRect.gd" type="Script" id=5]
-[ext_resource path="res://Assets/Audio Files/5344221538025472.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Audio Files/button.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio Files/main_menu.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio Files/button_pressed.wav" type="AudioStream" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -119,5 +119,5 @@ stream = ExtResource( 7 )
 [connection signal="playButton" from="StartGame" to="." method="_on_StartGame_playButton"]
 [connection signal="pressed" from="StartGame" to="StartGame" method="_on_StartGame_pressed"]
 [connection signal="animFinish" from="StartGame/ColorRect" to="." method="_on_ColorRect_animFinish"]
-[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 [connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="StartGame/ColorRect" method="_on_AnimationPlayer_animation_finished"]
+[connection signal="animation_finished" from="StartGame/ColorRect/AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

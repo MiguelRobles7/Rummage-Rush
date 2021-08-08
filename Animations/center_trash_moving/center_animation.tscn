@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Animations/center_trash_moving/center remake2.glb" type="PackedScene" id=1]
-[ext_resource path="res://Animations/center_trash_moving/center remake1.glb" type="PackedScene" id=2]
-[ext_resource path="res://Animations/center_trash_moving/trash 1.gltf" type="PackedScene" id=3]
+[ext_resource path="res://Animations/center_trash_moving/center_2.glb" type="PackedScene" id=1]
+[ext_resource path="res://Animations/center_trash_moving/center_1.glb" type="PackedScene" id=2]
+[ext_resource path="res://Animations/center_trash_moving/trash_1.gltf" type="PackedScene" id=3]
 
 [sub_resource type="Animation" id=1]
 resource_name = "center"
